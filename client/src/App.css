@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+}
+
+.banner {
+  background-color: #282c34;
+  width:100%;
+  overflow:hidden;
+  height: 200px;
+  position: relative;
+}
+
+.link{
+  color:white;
+  text-decoration: none;
+}
+.link:hover {
+  color: pink;
+}
+.navBar {
+  height: 5vh;
+  width:100%;
+  overflow:hidden;
+  position: absolute;
+  bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0rem 5rem;
+}
+
+li {
+  display: inline;
+  float: left;
+  padding: 20px;
+  font-size: large;
+  color: white;
+}
+.body {
+  text-align: center;
+}
+
+.thumbnail{
+  display: inline-block;
+  padding: 7.5rem 5rem;
+  vertical-align: middle;
+}
+
+.title{
+  padding: .5rem;
+  font-size: x-large;
+}
+
+.description{
+  padding: 0px 20px 20px 0px;
+  border-bottom: dashed 1px black;
+}
+
+.pagination{
+  margin-top: -50px;
+  color:black;
+}
+
+.pagination:hover{
+  color:pink;
+}
