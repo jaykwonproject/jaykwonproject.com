@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://main.d392y1t4lf06m.amplifyapp.com/",
+  "proxy":"https://intense-retreat-45808.herokuapp.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
