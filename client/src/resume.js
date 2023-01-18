@@ -10,7 +10,9 @@ function resume() {
       {/*body section*/}      
       <div className="body">
         <h1>RESUME</h1>
-        <h4>still working on it..</h4>
+        <object data="http://africau.edu/images/default/sample.pdf" type="application/pdf" width="100%" height="100%">
+          <p>Alternative text - include a link <a href="http://africau.edu/images/default/sample.pdf">to the PDF!</a></p>
+        </object>
       </div>
 
 
