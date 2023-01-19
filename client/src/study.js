@@ -107,6 +107,7 @@ function Study() {
                   )
                 })}
                 </p>
+                <code>{post.code}</code>
               </div>
               
             )
