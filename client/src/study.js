@@ -66,7 +66,7 @@ function Study() {
         
         {currentPosts.map((post)=>{
           
-          if (post.genre==="study"){
+          if (post.genre==="study" && post.link!=""){
             return(
               <div style={{textAlign:"center"}}>
                 <h3>{post.title}</h3>
@@ -87,6 +87,23 @@ function Study() {
                       <br/>
                     </React.Fragment>
                     
+                  )
+                })}
+                </p>
+              </div>
+              
+            )
+          }else{
+            return(
+              <div style={{textAlign:"center"}}>
+                <h3>{post.title}</h3>
+                <p className='description' style={{marginBottom:"50px", width:"800px", marginLeft:"auto", marginRight:"auto", marginTop:"20px"}}>
+                {post.description.split("\n").map((line)=>{
+                  return(
+                    <React.Fragment>
+                      {line}
+                      <br/>
+                    </React.Fragment>
                   )
                 })}
                 </p>
