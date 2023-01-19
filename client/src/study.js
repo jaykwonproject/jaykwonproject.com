@@ -106,8 +106,8 @@ function Study() {
                     </React.Fragment>
                   )
                 })}
-                </p>
                 <code>{post.code}</code>
+                </p>
               </div>
               
             )
