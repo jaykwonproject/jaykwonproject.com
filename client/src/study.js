@@ -9,7 +9,8 @@ function Study() {
       genre: '',
       title: '',
       link: '',
-      description: ''
+      description: '',
+      createdAt:''
     }
   ])
 
@@ -99,9 +100,21 @@ function Study() {
                 <h3>{post.title}</h3>
                 <p className='description' style={{marginBottom:"50px", width:"800px", marginLeft:"auto", marginRight:"auto", marginTop:"20px"}}>
                 {post.description.split("\n").map((line)=>{
+                  if(line.includes('codingStart')){
+                    const endPos=line.indexOf("codingEnd")
+                    const codingPart=line.substring(11,endPos)
+                    return(
+                      <React.Fragment>
+                        <code>{codingPart}</code>
+                        
+                        <br/>
+                      </React.Fragment>
+                    )
+                  }
                   return(
                     <React.Fragment>
                       {line}
+                      
                       <br/>
                     </React.Fragment>
                   )

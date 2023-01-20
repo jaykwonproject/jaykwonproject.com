@@ -9,7 +9,8 @@ function Post() {
         genre:'',
         link:'',
         title: '',
-        description: ''
+        description: '',
+        createdAt: ''
     })
 
 
@@ -26,11 +27,15 @@ function Post() {
     function addPost(event){
         event.preventDefault();
         alert('added!');
+        const date =  new Date();
+        //let time = date.toString();
+        let time = 'plz'
         const newPost = {
             genre: input.genre,
             link: input.link,
             title: input.title,
-            description: input.description
+            description: input.description,
+            createdAt: time
         }
         console.log(newPost);
         axios.post('/newPost', newPost);
