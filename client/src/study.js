@@ -98,7 +98,7 @@ function Study() {
             return(
               <div style={{textAlign:"center"}}>
                 <h3>{post.title}</h3>
-                <p className='description' style={{marginBottom:"50px", width:"800px", marginLeft:"auto", marginRight:"auto", marginTop:"20px"}}>
+                <p className='study-description' style={{marginBottom:"50px", width:"800px", marginLeft:"auto", marginRight:"auto", marginTop:"20px"}}>
                 
                 {post.description.split("\n").map((line)=>{
                   if(line.includes('codingStart') || codingCheck===true){
@@ -111,12 +111,11 @@ function Study() {
                       
                     return(
                       <React.Fragment>
-                        <code>{codingPart}</code> 
-                        <br/>
+                        <code>{codingPart}</code> <br/>
+                        
+                        
                       </React.Fragment>
                     )
-                    
-                    
                   }
                   return(
                     <React.Fragment>
@@ -126,7 +125,7 @@ function Study() {
                     </React.Fragment>
                   )
                 })}
-                <code>{post.code}</code>
+            
                 </p>
               </div>
               
