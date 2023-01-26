@@ -104,7 +104,7 @@ function Study() {
                   if(line.includes('codingStart') || codingCheck===true){
                     codingCheck=true
                     if (line.includes('codingEnd')){
-                      codingCheck=False
+                      codingCheck=false
                     }
                     const codingPart = line.replace(/codingStart/g, '');
                     codingPart = codingPart.replace(/codingEnd/g, '');
