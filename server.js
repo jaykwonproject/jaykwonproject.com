@@ -22,15 +22,14 @@ app.post("/newPost",  (req,res)=>{
     const link = req.body.link;
     const title = req.body.title;
     const description = req.body.description;
-    const timestmp = req.body.createdAt;
+
     const newPost = new postModel({
         genre,
         link,
         title,
-        description,
-        timestmp
+        description
     });
-    console.log(newPost);
+    //console.log(post);
     newPost.save();  
     res.json(newPost);
 });

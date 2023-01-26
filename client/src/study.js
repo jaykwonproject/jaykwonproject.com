@@ -9,8 +9,7 @@ function Study() {
       genre: '',
       title: '',
       link: '',
-      description: '',
-      createdAt:''
+      description: ''
     }
   ])
 
