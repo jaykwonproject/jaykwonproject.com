@@ -9,6 +9,7 @@ function Post() {
         genre:'',
         link:'',
         title: '',
+        date: '',
         description: ''
     })
 
@@ -30,6 +31,7 @@ function Post() {
             genre: input.genre,
             link: input.link,
             title: input.title,
+            date: input.date,
             description: input.description
         }
         console.log(newPost);
@@ -54,6 +56,9 @@ function Post() {
             </div>
             <div className="form-group">
                 <input onChange={handleChange} name="title" value={input.title} className="form-control" placeholder='title'></input>
+            </div>
+            <div className="form-group">
+                <input onChange={handleChange} name="date" value={input.date} className="form-control" placeholder='date'></input>
             </div>
             <div className="form-group">
                 <textarea onChange={handleChange} name ="description" value={input.description} className="form-control" style={{width:"700px", height:"200px"}}></textarea>

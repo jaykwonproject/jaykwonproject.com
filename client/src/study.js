@@ -34,7 +34,9 @@ function Study() {
     }
   });
   
-  if (postOrder ==="recent"){
+  studyPosts.reverse();
+
+  if (postOrder ==="upload"){
     studyPosts.reverse();
   }
 
@@ -61,8 +63,8 @@ function Study() {
           const selectedOrder = e.target.value;
           setPostOrder(selectedOrder);
         }}>
-          <option value="upload">Oldest</option>
           <option value="recent">Newest</option>
+          <option value="upload">Oldest</option>
         </select>
         
         {currentPosts.map((post)=>{

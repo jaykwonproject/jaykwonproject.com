@@ -21,12 +21,14 @@ app.post("/newPost",  (req,res)=>{
     const genre = req.body.genre;
     const link = req.body.link;
     const title = req.body.title;
+    const date = req.body.date;
     const description = req.body.description;
 
     const newPost = new postModel({
         genre,
         link,
         title,
+        date,
         description
     });
     //console.log(post);
