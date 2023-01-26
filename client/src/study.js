@@ -46,6 +46,7 @@ function Study() {
   //change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
+  const codingCheck = False
 
   return (
     <div className="App">
@@ -98,17 +99,24 @@ function Study() {
               <div style={{textAlign:"center"}}>
                 <h3>{post.title}</h3>
                 <p className='description' style={{marginBottom:"50px", width:"800px", marginLeft:"auto", marginRight:"auto", marginTop:"20px"}}>
+                
                 {post.description.split("\n").map((line)=>{
-                  if(line.includes('codingStart')){
-                    const endPos=line.indexOf("codingEnd")
-                    const codingPart=line.substring(11,endPos)
+                  if(line.includes('codingStart') || codingCheck===True){
+                    codingCheck=True
+                    if (line.includes('codingEnd')){
+                      codingCheck=False
+                    }
+                    const codingPart = line.replace(/codingStart/g, '');
+                    codingPart = codingPart.replace(/codingEnd/g, '');
+                      
                     return(
                       <React.Fragment>
-                        <code>{codingPart}</code>
-                        
+                        <code>{codingPart}</code> 
                         <br/>
                       </React.Fragment>
                     )
+                    
+                    
                   }
                   return(
                     <React.Fragment>
