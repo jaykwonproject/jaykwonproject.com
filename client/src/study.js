@@ -46,7 +46,7 @@ function Study() {
   //change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
-  const codingCheck = false;
+  let codingCheck = false;
 
   return (
     <div className="App">
@@ -106,7 +106,7 @@ function Study() {
                     if (line.includes('codingEnd')){
                       codingCheck=false
                     }
-                    const codingPart = line.replace(/codingStart/g, '');
+                    let codingPart = line.replace(/codingStart/g, '');
                     codingPart = codingPart.replace(/codingEnd/g, '');
                       
                     return(
