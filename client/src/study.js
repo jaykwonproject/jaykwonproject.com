@@ -8,6 +8,7 @@ function Study() {
     {
       genre: '',
       title: '',
+      date:'',
       link: '',
       description: ''
     }
@@ -99,7 +100,8 @@ function Study() {
           }else{
             return(
               <div style={{textAlign:"center"}}>
-                <h3>{post.title}</h3>
+                <h3> &lt; {post.title} &gt; </h3>
+                <h5>{post.date}</h5>
                 <p className='study-description' style={{marginBottom:"50px", width:"800px", marginLeft:"auto", marginRight:"auto", marginTop:"20px"}}>
                 
                 {post.description.split("\n").map((line)=>{
@@ -112,7 +114,7 @@ function Study() {
                     codingPart = codingPart.replace(/codingEnd/g, '');
                       
                     return(
-                      <React.Fragment>
+                      <React.Fragment> 
                         <code>{codingPart}</code> <br/>
                         
                         

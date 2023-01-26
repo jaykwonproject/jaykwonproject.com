@@ -27,11 +27,12 @@ function Post() {
     function addPost(event){
         event.preventDefault();
         alert('added!');
+        const time = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) ;
         const newPost = {
             genre: input.genre,
             link: input.link,
             title: input.title,
-            date: input.date,
+            date: time,
             description: input.description
         }
         console.log(newPost);
