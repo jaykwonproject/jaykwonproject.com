@@ -46,7 +46,7 @@ function Study() {
   //change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
-  const codingCheck = False
+  const codingCheck = false;
 
   return (
     <div className="App">
@@ -101,8 +101,8 @@ function Study() {
                 <p className='description' style={{marginBottom:"50px", width:"800px", marginLeft:"auto", marginRight:"auto", marginTop:"20px"}}>
                 
                 {post.description.split("\n").map((line)=>{
-                  if(line.includes('codingStart') || codingCheck===True){
-                    codingCheck=True
+                  if(line.includes('codingStart') || codingCheck===true){
+                    codingCheck=true
                     if (line.includes('codingEnd')){
                       codingCheck=False
                     }
