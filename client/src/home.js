@@ -1,5 +1,7 @@
 import './App.css';
 import Banner from './banner';
+import { Chrono } from "react-chrono";
+import data from "./data";
 
 function home() {
   return (
@@ -10,33 +12,11 @@ function home() {
       {/*body section*/}
       
       <div className="body">
-        
-        <div className="thumbnail">
-          <div className="title">project american dream</div>
-          <iframe
-          src="https://www.youtube.com/embed/videoseries?list=PLzM9K5-Ude6jv2bMoPcZuGjajTauM1LuK"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          title="video"
-          width="700"
-          height="500"
-          />
+        <h1>Hi. I'm HyukJoo Kwon</h1>
+        <div style={{marginBottom:"50px", width:"1000px", marginLeft:"auto", marginRight:"auto", marginTop:"20px"}}>
+        <Chrono items={data} mode="VERTICAL_ALTERNATING" />
         </div>
-
         
-        <div className="thumbnail">
-          <div className="title">misc</div>
-          <iframe
-          src="https://www.youtube.com/embed/videoseries?list=PLzM9K5-Ude6iYw0rhkg-h0PtbLACzeR3d"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          title="video"
-          width="700"
-          height="500"
-          />
-        </div>
       </div>
 
 
