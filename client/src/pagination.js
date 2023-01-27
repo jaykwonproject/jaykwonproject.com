@@ -12,9 +12,9 @@ const Pagination = ({postsPerPage, totalPosts, paginate}) => {
   return (
     <div>
         <nav style={{textAlign:"center"}}>
-            <ul style={{display: "inline-block"}}>
+            <ul className='ul_banner' style={{display: "inline-block"}}>
                 {pageNumbers.map(number=>(
-                    <li><a className="pagination" onClick={() => paginate(number)} >{number}</a></li>
+                    <li className='li_banner'><a className="pagination" onClick={() => paginate(number)} >{number}</a></li>
                 ))}
             </ul>
         </nav>
