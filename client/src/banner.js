@@ -5,11 +5,11 @@ const banner = () =>{
     
         return <div className="banner">
                 <div className="navBar">
-                    <ul>
-                        <li><Link className="link" to="/">home</Link></li>
-                        <li><Link className="link" to="/resume">résumé</Link></li>
-                        <li><Link className="link" to="/study">study</Link></li>
-                        <li><Link className="link" to="/misc">misc.</Link></li>
+                    <ul className='ul_banner'>
+                        <li className='li_banner'><Link className="link" to="/">home</Link></li>
+                        <li className='li_banner'><Link className="link" to="/resume">résumé</Link></li>
+                        <li className='li_banner'><Link className="link" to="/study">study</Link></li>
+                        <li className='li_banner'><Link className="link" to="/misc">misc.</Link></li>
                     </ul>
                 </div>
             </div>;
