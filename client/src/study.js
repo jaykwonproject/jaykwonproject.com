@@ -8,9 +8,9 @@ function Study() {
     {
       genre: '',
       title: '',
+      date:'',
       link: '',
-      description: '',
-      createdAt:''
+      description: ''
     }
   ])
 
@@ -35,7 +35,9 @@ function Study() {
     }
   });
   
-  if (postOrder ==="recent"){
+  studyPosts.reverse();
+
+  if (postOrder ==="upload"){
     studyPosts.reverse();
   }
 
@@ -47,6 +49,7 @@ function Study() {
   //change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
+  let codingCheck = false;
 
   return (
     <div className="App">
@@ -61,8 +64,8 @@ function Study() {
           const selectedOrder = e.target.value;
           setPostOrder(selectedOrder);
         }}>
-          <option value="upload">Oldest</option>
           <option value="recent">Newest</option>
+          <option value="upload">Oldest</option>
         </select>
         
         {currentPosts.map((post)=>{
@@ -97,17 +100,24 @@ function Study() {
           }else{
             return(
               <div style={{textAlign:"center"}}>
-                <h3>{post.title}</h3>
-                <p className='description' style={{marginBottom:"50px", width:"800px", marginLeft:"auto", marginRight:"auto", marginTop:"20px"}}>
+                <h3> &lt; {post.title} &gt; </h3>
+                <h5>{post.date}</h5>
+                <p className='study-description' style={{marginBottom:"50px", width:"800px", marginLeft:"auto", marginRight:"auto", marginTop:"20px"}}>
+                
                 {post.description.split("\n").map((line)=>{
-                  if(line.includes('codingStart')){
-                    const endPos=line.indexOf("codingEnd")
-                    const codingPart=line.substring(11,endPos)
+                  if(line.includes('codingStart') || codingCheck===true){
+                    codingCheck=true
+                    if (line.includes('codingEnd')){
+                      codingCheck=false
+                    }
+                    let codingPart = line.replace(/codingStart/g, '');
+                    codingPart = codingPart.replace(/codingEnd/g, '');
+                      
                     return(
-                      <React.Fragment>
-                        <code>{codingPart}</code>
+                      <React.Fragment> 
+                        <code>{codingPart}</code> <br/>
                         
-                        <br/>
+                        
                       </React.Fragment>
                     )
                   }
@@ -119,7 +129,7 @@ function Study() {
                     </React.Fragment>
                   )
                 })}
-                <code>{post.code}</code>
+            
                 </p>
               </div>
               

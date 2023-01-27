@@ -9,8 +9,8 @@ function Post() {
         genre:'',
         link:'',
         title: '',
-        description: '',
-        createdAt: ''
+        date: '',
+        description: ''
     })
 
 
@@ -27,15 +27,13 @@ function Post() {
     function addPost(event){
         event.preventDefault();
         alert('added!');
-        const date =  new Date();
-        //let time = date.toString();
-        let time = 'plz'
+        const time = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) ;
         const newPost = {
             genre: input.genre,
             link: input.link,
             title: input.title,
-            description: input.description,
-            createdAt: time
+            date: time,
+            description: input.description
         }
         console.log(newPost);
         axios.post('/newPost', newPost);
@@ -59,6 +57,9 @@ function Post() {
             </div>
             <div className="form-group">
                 <input onChange={handleChange} name="title" value={input.title} className="form-control" placeholder='title'></input>
+            </div>
+            <div className="form-group">
+                <input onChange={handleChange} name="date" value={input.date} className="form-control" placeholder='date'></input>
             </div>
             <div className="form-group">
                 <textarea onChange={handleChange} name ="description" value={input.description} className="form-control" style={{width:"700px", height:"200px"}}></textarea>
