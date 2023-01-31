@@ -79,10 +79,24 @@ function home() {
         <div>
           <ul>
             <li>
-            Received the distinction of being on the Dean's List for my academic excellence in the Fall 2021 semester
+            SEO/Automation Pipeline Engineer
             </li>
             <li>
-            Relevant Coursework: Data Structure, Algo. and Complexity, Web application, Software Engineering
+            Automation using AWS batch/EMR/Lambda to generate daily update sitemaps for more than 8 million detailed pages
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
+            Awarded a commander’s commendation for exceptional excellence in physical and skills tests among more than 550 soliders by the 1st division commander
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
+            IB HL Computer Science, Mathematics, Economics
             </li>
           </ul>
         </div>
