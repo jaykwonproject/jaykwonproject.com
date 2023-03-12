@@ -15,7 +15,7 @@
   text-decoration: none;
 }
 .link:hover {
-  color: #F7D0E4;
+  color: rgb(177, 177, 177);
 }
 .navBar {
   height: 5vh;
