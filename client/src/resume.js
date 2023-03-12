@@ -9,9 +9,8 @@ function resume() {
 
       {/*body section*/}      
       <div className="body">
-        <h1>RESUME</h1>
         {/*<iframe src="https://i.imgur.com/BBwRKV8.jpg" width="80%" height="850px"></iframe>*/}
-        <img src="https://i.imgur.com/AZsOyaZ.jpg" title="HyukJoo_Resume" />
+        <img src="https://i.imgur.com/AZsOyaZ.jpg" width="80%" height="850px" title="HyukJoo_Resume" />
       </div>
 
 
