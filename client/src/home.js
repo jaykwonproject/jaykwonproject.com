@@ -50,19 +50,13 @@ function home() {
         <div>
           <ul>
             <li>
-            Developed an automated pipeline to reduce the data delivery time by 9 hours using Bash, Python, SQL in Linux.
+            Automated pipeline to reduce data delivery time by 70% in Linux grid computing system using Bash, Python, and MySQL.
             </li>
             <li>
-            Upgraded AWS file transferring method to log accurate upload progress of over 500 orders using Python and Bash.
+            Developed AWS data delivery pipeline with detailed logger to handle 20TB+ of weekly uploads with no issues to date.
             </li>
             <li>
-            Analyzed data QC, ran analysis pipelines, and delivered results to clients daily.
-            </li>
-            <li>
-            Introduced git version control system to safely modify, test and deploy pipelines.
-            </li>
-            <li>
-            Programmed a sample swap detection script to locate switched samples using Python and Bash.
+            Built Vue.js prototype web app, integrated with REST APIs, in LAMP environment on AWS EC2 server.
             </li>
           </ul>
         </div>
@@ -79,10 +73,16 @@ function home() {
         <div>
           <ul>
             <li>
-            SEO/Automation Pipeline Engineer
+            Reduced XML sitemap generation time by 50% using AWS EMR in Scala for daily indexing of over 8 million pages.
             </li>
             <li>
-            Automation using AWS batch/EMR/Lambda to generate daily update sitemaps for more than 8 million detailed pages
+            Accelerated daily google indexation from 1,000 to over 1.5 million pages.
+            </li>
+            <li>
+            Implemented live time image resizing and conversion module to reduce file size by 1/30.
+            </li>
+            <li>
+            Constructed ETL pipeline using Airflow to ingest and cleanse 10TB+ data from 5 marketing analytic platforms weekly.
             </li>
           </ul>
         </div>
