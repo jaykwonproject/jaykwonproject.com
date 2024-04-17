@@ -35,13 +35,9 @@ app.post("/newPost",  (req,res)=>{
     res.json(newPost);
 });
 
-
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('client/build'))
-    app.get('*',(req,res)=>{
-        res.sendFile(path.resolve(__dirname,'client','build','index.html'));
-    })
-}
+app.use("/",(req,res)=>{
+    res.send('server is running');
+});
 
 app.listen(port,function(){
     console.log("express is running")
