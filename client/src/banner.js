@@ -9,7 +9,6 @@ const banner = () =>{
                         <li className='li_banner'><Link className="link" to="/">home</Link></li>
                         <li className='li_banner'><Link className="link" to="/resume">résumé</Link></li>
                         <li className='li_banner'><Link className="link" to="/study">study</Link></li>
-                        <li className='li_banner'><Link className="link" to="/misc">misc.</Link></li>
                     </ul>
                 </div>
             </div>;
