@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const postModel = require("./backend/models/modelPost");
+const postModel = require("./models/modelPost");
 const cors = require("cors");
 const path = require("path"); 
 app.use(express.json());
