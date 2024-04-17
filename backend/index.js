@@ -1,12 +1,11 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const postModel = require("./models/modelPost");
+const postModel = require("./backend/models/modelPost");
 const cors = require("cors");
 const path = require("path"); 
 app.use(express.json());
 app.use(cors());
-
 mongoose.connect(process.env.MONGODB_URI);
 
 const port = process.env.PORT || 3001;
