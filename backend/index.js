@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const postModel = require("./models/modelPost");
 const cors = require("cors");
-app.use(cors());
+app.use(cors({origin: 'https://jaykwonproject-5qqgfid02-jaykwonprojects-projects.vercel.app}));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI);
