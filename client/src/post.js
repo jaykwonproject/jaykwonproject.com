@@ -36,7 +36,7 @@ function Post() {
             description: input.description
         }
         console.log(newPost);
-        axios.post('/newPost', newPost);
+        axios.post('https://jaykwonproject-com-backend.vercel.app/newPost', newPost);
     }
     
   
