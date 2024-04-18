@@ -10,8 +10,6 @@ mongoose.connect(process.env.MONGODB_URI);
 const port = process.env.PORT || 3001;
 
 app.get("/getPosts",(req,res)=>{
-    /*CORS enabled*/
-    res.set('Access-Control-Allow-Origin', '*');
     postModel.find().then(studyCollection=>res.json(studyCollection));
 });
 
