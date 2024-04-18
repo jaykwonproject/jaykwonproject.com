@@ -16,6 +16,7 @@ app.get("/getPosts",(req,res)=>{
 });
 
 app.post("/newPost",  (req,res)=>{
+    res.header("Access-Control-Allow-Origin", "*");
     const genre = req.body.genre;
     const link = req.body.link;
     const title = req.body.title;
