@@ -1,9 +1,8 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const postModel = require("./backend/models/modelPost");
+const postModel = require("./models/modelPost");
 const cors = require("cors");
-const path = require("path"); 
 app.use(express.json());
 app.use(cors());
 mongoose.connect(process.env.MONGODB_URI);
@@ -35,13 +34,9 @@ app.post("/newPost",  (req,res)=>{
     res.json(newPost);
 });
 
-
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('client/build'))
-    app.get('*',(req,res)=>{
-        res.sendFile(path.resolve(__dirname,'client','build','index.html'));
-    })
-}
+app.use("/",(req,res)=>{
+    res.send('server is running');
+});
 
 app.listen(port,function(){
     console.log("express is running")
