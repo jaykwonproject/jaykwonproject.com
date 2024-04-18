@@ -11,6 +11,7 @@ app.use(cors({
 mongoose.connect(process.env.MONGODB_URI);
 
 const port = process.env.PORT || 3001;
+app.options('*', cors());
 
 app.get("/getPosts",(req,res)=>{
     postModel.find().then(studyCollection=>res.json(studyCollection));
