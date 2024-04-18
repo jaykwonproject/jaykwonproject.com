@@ -3,8 +3,9 @@ const app = express();
 const mongoose = require("mongoose");
 const postModel = require("./models/modelPost");
 const cors = require("cors");
+app.use(cors());
 app.use(express.json());
-cors({     origin: '*',     methods: '*',     allowedHeaders: ['Content-Type', 'Authorization'],     credentials: true,   })
+
 mongoose.connect(process.env.MONGODB_URI);
 
 const port = process.env.PORT || 3001;
