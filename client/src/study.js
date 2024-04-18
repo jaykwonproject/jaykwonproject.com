@@ -19,7 +19,7 @@ function Study() {
   const[postOrder, setPostOrder] = useState("");
   
   useEffect(()=>{
-    fetch('/getPosts').then(res=>{
+    fetch('https://jaykwonproject-com-backend-pyvt8rv5l-jaykwonprojects-projects.vercel.app/getPosts').then(res=>{
       if(res.ok){
         return res.json() 
       }
