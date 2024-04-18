@@ -4,7 +4,11 @@ const mongoose = require("mongoose");
 const postModel = require("./models/modelPost");
 const cors = require("cors");
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://jaykwonproject-5qqgfid02-jaykwonprojects-projects.vercel.app',
+    optionsSuccessStatus: 200, 
+    allowedHeaders: ['Content-Type']
+}));
 mongoose.connect(process.env.MONGODB_URI);
 
 const port = process.env.PORT || 3001;
