@@ -1,7 +1,6 @@
 {
   "name": "website",
   "version": "0.1.0",
-  "proxy": "https://jaykwonproject-com-backend-77k97dmg6-jaykwonprojects-projects.vercel.app/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
