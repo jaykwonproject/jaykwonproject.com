@@ -6,8 +6,7 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors({
     origin: 'https://jaykwonproject-5qqgfid02-jaykwonprojects-projects.vercel.app',
-    optionsSuccessStatus: 200, 
-    allowedHeaders: ['Content-Type']
+    optionsSuccessStatus: 200
 }));
 mongoose.connect(process.env.MONGODB_URI);
 
