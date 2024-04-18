@@ -4,25 +4,15 @@ const mongoose = require("mongoose");
 const postModel = require("./models/modelPost");
 const cors = require("cors");
 app.use(cors());
-const options = [
-    cors({
-      origin: '*',
-      methods: '*',
-      allowedHeaders: ['Content-Type', 'Authorization'],
-      credentials: true,
-    })
-  ];
 app.use(options);
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI);
 
 const port = process.env.PORT || 3001;
-app.options('*', cors());
 
 app.get("/getPosts",(req,res)=>{
-
-    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Origin", "https://jaykwonproject-fqgvmaltq-jaykwonprojects-projects.vercel.app/");
     postModel.find().then(studyCollection=>res.json(studyCollection));
 });
 

@@ -19,9 +19,8 @@ function Study() {
   const[postOrder, setPostOrder] = useState("");
   
   useEffect(()=>{
-    fetch('/getPosts',{
+    fetch('https://web-production-be99.up.railway.app/getPosts',{
       method: 'GET',
-      credentials: 'include',
       headers: {
         'Content-Type': 'application/json'
       }}).then(res=>{
