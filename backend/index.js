@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const postModel = require("./models/modelPost");
 const cors = require("cors");
 app.use(cors());
-app.use(options);
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI);
