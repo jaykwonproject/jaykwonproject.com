@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +15,6 @@
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "mongoose": "^6.4.0",
-    "nodemon": "^2.0.16",
-    "path": "^0.12.7"
+    "nodemon": "^2.0.16"
   }
 }

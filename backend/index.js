@@ -3,7 +3,6 @@ const app = express();
 const mongoose = require("mongoose");
 const postModel = require("./models/modelPost");
 const cors = require("cors");
-const path = require("path"); 
 app.use(express.json());
 app.use(cors());
 mongoose.connect(process.env.MONGODB_URI);
