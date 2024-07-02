@@ -1,5 +1,5 @@
 import './App.css';
-import Banner from './banner';
+import NavBar from './components/NavBar';
 import React, {useState, useEffect} from "react";
 import Pagination from './pagination';
 function Misc() {
@@ -51,7 +51,7 @@ function Misc() {
   return (
     <div className="App">
       {/*header section*/}
-      <Banner/>
+      <NavBar/>
 
       {/*body section*/}      
       <div className="body" style={{width: "100%", textAlign:"center"}}>

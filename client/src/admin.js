@@ -1,11 +1,11 @@
 import './App.css';
-import Banner from './banner';
+import NavBar from './components/NavBar';
 
 function admin() {
   return (
     <div className="App">
       {/*header section*/}
-      <Banner/>
+      <NavBar/>
 
       {/*body section*/}      
       <div className="body">

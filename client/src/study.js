@@ -1,8 +1,8 @@
 import './App.css';
-import Banner from './banner';
+import NavBar from './components/NavBar';
 import React, {useState, useEffect} from "react";
 import Pagination from './pagination';
-function Study() {
+function Study({ isNavbarCollapsed, setIsNavbarCollapsed }) {
 
   const[posts, setPosts] = useState([
     {
@@ -19,7 +19,7 @@ function Study() {
   const[postOrder, setPostOrder] = useState("");
   
   useEffect(()=>{
-    fetch('https://jaykwonproject-com-backend.vercel.app/getPosts',{
+    fetch('/getPosts',{
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ function Study() {
   return (
     <div className="App">
       {/*header section*/}
-      <Banner/>
+      <NavBar isCollapsed={isNavbarCollapsed} setIsCollapsed={setIsNavbarCollapsed} />
 
       {/*body section*/}      
       <div className="body" style={{width: "100%", textAlign:"center"}}>

@@ -1,5 +1,5 @@
 import './App.css';
-import Banner from './banner';
+import NavBar from './components/NavBar';
 import React, {useState} from "react";
 import axios from 'axios';
 
@@ -43,7 +43,7 @@ function Post() {
     return (
     <div className="App">
       {/*header section*/}
-      <Banner/>
+      <NavBar/>
 
       {/*body section*/}      
       <div className="body">
