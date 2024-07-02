@@ -12,7 +12,7 @@ const NavBar = ({ isCollapsed, setIsCollapsed }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://jaykwonproject-com-backend.vercel.app/profile', {
+        fetch('https://www.jaykwonproject-com-backend.vercel.app/profile', {
             credentials: 'include'
         }).then(response => {
             if (response.ok) {
