@@ -12,7 +12,7 @@ const NavBar = ({ isCollapsed, setIsCollapsed }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:3001/profile', {
+        fetch('https://jaykwonproject-com-backend.vercel.app/profile', {
             credentials: 'include'
         }).then(response => {
             if (response.ok) {
@@ -35,7 +35,7 @@ const NavBar = ({ isCollapsed, setIsCollapsed }) => {
     }, [removeCookie]);
 
     function logout() {
-        fetch('http://localhost:3001/logout', {
+        fetch('https://jaykwonproject-com-backend.vercel.app/logout', {
             credentials: 'include',
             method: 'POST',
         });
