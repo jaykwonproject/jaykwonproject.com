@@ -17,7 +17,7 @@ function BlogPost({ isNavbarCollapsed, setIsNavbarCollapsed }) {
 
   const fetchPost = async () => {
     try {
-      const response = await fetch(`/getPost/${id}`); // Ensure your backend can handle this route
+      const response = await fetch(`https://jaykwonproject-com-backend.vercel.app/getPost/${id}`); // Ensure your backend can handle this route
       if (!response.ok) {
         throw new Error('Failed to fetch post');
       }

@@ -17,7 +17,7 @@ function Home({ isNavbarCollapsed, setIsNavbarCollapsed }) {
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch('/getPosts');
+      const response = await fetch('https://jaykwonproject-com-backend.vercel.app/getPosts');
       if (!response.ok) {
         throw new Error('Failed to fetch posts');
       }

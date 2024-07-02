@@ -19,7 +19,7 @@ function Study({ isNavbarCollapsed, setIsNavbarCollapsed }) {
   const[postOrder, setPostOrder] = useState("");
   
   useEffect(()=>{
-    fetch('/getPosts',{
+    fetch('https://jaykwonproject-com-backend.vercel.app/getPosts',{
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
