@@ -10,6 +10,7 @@ const cookieParser = require('cookie-parser');
 app.use(cors({credentials:true, origin:'https://www.jaykwonproject.com'}));
 app.use(express.json());
 app.use(cookieParser() );
+app.use(cookies());
 const salt = bcrypt.genSaltSync(10);
 const hash = bcrypt.hashSync("B4c0/\/", salt);
 const secret = process.env.SECRET;
@@ -90,7 +91,13 @@ app.post("/login", async(req,res)=>{
 });
 
 app.post('/logout', (req,res)=>{
-    res.cookie('token', '').json('ok');
+    res.cookie('token', '',{
+        httpOnly: true,
+        secure: true,
+        sameSite: 'None', 
+        domain: '.jaykwonproject-com-backend.vercel.app', 
+        path: '/' 
+      }).json('ok');
 });
 
 app.get('/profile', (req,res)=>{
