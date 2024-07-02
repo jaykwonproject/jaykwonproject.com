@@ -2,11 +2,9 @@ import '../App.css';
 import NavBar from '../components/NavBar';
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
-import { useCookies } from 'react-cookie';
 import { Link, useNavigate } from "react-router-dom";
 
 function Login({ isNavbarCollapsed, setIsNavbarCollapsed }) {
-  const [cookies, setCookie, removeCookie] = useCookies(['token']);
   const [password, setPassword] = useState('');
   const [redirect, setRedirect] = useState(false);
   const [username, setUsername] = useState(null);
@@ -22,7 +20,6 @@ function Login({ isNavbarCollapsed, setIsNavbarCollapsed }) {
     });
     if (response.ok) {
       response.json().then(userInfo => {
-        setCookie('token');
         setUsername(userInfo.username);
         navigate("/");
       })
