@@ -10,7 +10,6 @@ const cookieParser = require('cookie-parser');
 app.use(cors({credentials:true, origin:'https://www.jaykwonproject.com'}));
 app.use(express.json());
 app.use(cookieParser() );
-app.use(cookies());
 const salt = bcrypt.genSaltSync(10);
 const hash = bcrypt.hashSync("B4c0/\/", salt);
 const secret = process.env.SECRET;
