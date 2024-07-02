@@ -88,7 +88,7 @@ app.post('/logout', (req,res)=>{
 });
 
 app.get('/profile', (req,res)=>{
-    const {token} = req.cookies.token;
+    const {token} = req.cookies;
     console.log(req);
     console.log(token);
     console.log(secret);
