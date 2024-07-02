@@ -12,7 +12,7 @@ const NavBar = ({ isCollapsed, setIsCollapsed }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('/profile', {
+        fetch('https://www.jaykwonproject.com//profile', {
             credentials: 'include'
         }).then(response => {
             if (response.ok) {
@@ -35,7 +35,7 @@ const NavBar = ({ isCollapsed, setIsCollapsed }) => {
     }, [removeCookie]);
 
     function logout() {
-        fetch('/logout', {
+        fetch('https://www.jaykwonproject.com//logout', {
             credentials: 'include',
             method: 'POST',
         });
