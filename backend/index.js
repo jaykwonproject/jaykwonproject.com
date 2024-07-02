@@ -89,7 +89,9 @@ app.post('/logout', (req,res)=>{
 
 app.get('/profile', (req,res)=>{
     const {token} = req.cookies;
+    console.log(req);
     console.log(token);
+    console.log(secret);
     if(token){
         jwt.verify(token, secret, {}, (err,info) =>{
             if(err) throw err;
